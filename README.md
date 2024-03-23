@@ -25,6 +25,7 @@ Next, we turn our attention to $vec(S^{\otimes n})$. This vector comprises all e
 
 
 Now, we compute the $\mathbf{D}^{(n)} \cdot vec(S^{\otimes n})$:
+
 $$
 \mathbf{D}^{(n)} \cdot vec(S^{\otimes n}) = \sum_{\sum_{i=1}^m k_i = n} \left( C \cdot \prod_{i=1}^m \frac{p_i!}{(p_i - k_i)!} \cdot x_i^{p_i - k_i} \right) \cdot \left( \frac{n!}{k_1! k_2! \ldots k_m!} \right).
 $$
