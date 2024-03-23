@@ -10,11 +10,11 @@ Given the description of the theorem, our objective is to demonstrate that for a
 
 To establish this, it is essential to consider all possible $n^{th}$ order partial derivatives. For each specific set of $(k_1, k_2, \ldots, k_m)$ that satisfies $\sum_{i=1}^m k_i = n$, the $n^{th}$ order mixed partial derivative of $f$ (provided that all $k_i\! \leq\! p_i$) is given by:
 
-%\begin{equation}
+
 $$
 \frac{\partial^n f}{\partial x_1^{k_1} \partial x_2^{k_2} \ldots \partial x_m^{k_m}}\! =\! C \cdot \prod_{i=1}^m \frac{p_i!}{(p_i - k_i)!} \cdot x_i^{p_i - k_i},    
 $$
-%\end{equation}
+
 
 
 
@@ -30,7 +30,6 @@ $$
 
 
 Because we have a complete permutation of $n!$, it will be multiplied by each $\frac{p_i!}{(p_i - k_i)!}$. However, to compute the dot product, we must also consider the corresponding $x_i^{k_i}$ terms in $vec(S^{\otimes n})$. It is noted that the product of these terms yields the powers of the original polynomial $f$. This is due to each term $x_i^{p_i - k_i} \cdot x_i^{k_i}$ ultimately resulting in $x_i^{p_i}$. Consequently, we obtain:
-\begin{equation}
-\mathbf{D}^{(n)} \cdot vec(S^{\otimes n}) = C \cdot n! \cdot \prod_{i=1}^m x_i^{p_i} = n! \cdot f.    
-\nonumber
-\end{equation}
+$$
+\mathbf{D}^{(n)} \cdot vec(S^{\otimes n}) = C \cdot n! \cdot \prod_{i=1}^m x_i^{p_i} = n! \cdot f.    eee
+$$
