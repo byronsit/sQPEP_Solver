@@ -23,13 +23,17 @@ This is due to the fact that for each variable $x_i$, if we take the $k_i^{th}$ 
 Next, we turn our attention to $vec(S^{\otimes n})$. This vector comprises all elements of $S^{\otimes n}$, where $S$ is the set formed by the variables of $f$. Consequently, each element within $vec(S^{\otimes n})$ corresponds to the coefficient of a specific $n^{th}$ order partial derivative, represented by the multinomial coefficient $\binom{n}{k_1, k_2, \ldots, k_m}$. This coefficient is the number of ways to distribute $k_i$ derivatives to each $x_i$ from the $n$ derivatives. Here, the multinomial coefficient $\binom{n}{k_1, k_2, \ldots, k_m}$ is defined as $\frac{n!}{k_1! k_2! \ldots k_m!}$.
 
 
-Now, we can compute the $\mathbf{D}^{(n)} \cdot vec(S^{\otimes n})$:
+
+Now, we compute the $\mathbf{D}^{(n)} \cdot vec(S^{\otimes n})$:
 $$
-\sum_{\sum_{i=1}^m k_i = n} \left( C \cdot \prod_{i=1}^m \frac{p_i!}{(p_i - k_i)!} \cdot x_i^{p_i - k_i} \right) \cdot \left( \frac{n!}{k_1! k_2! \ldots k_m!} \right).
+\mathbf{D}^{(n)} \cdot vec(S^{\otimes n}) = \sum_{\sum_{i=1}^m k_i = n} \left( C \cdot \prod_{i=1}^m \frac{p_i!}{(p_i - k_i)!} \cdot x_i^{p_i - k_i} \right) \cdot \left( \frac{n!}{k_1! k_2! \ldots k_m!} \right).
 $$
+
+
 
 
 Because we have a complete permutation of $n!$, it will be multiplied by each $\frac{p_i!}{(p_i - k_i)!}$. However, to compute the dot product, we must also consider the corresponding $x_i^{k_i}$ terms in $vec(S^{\otimes n})$. It is noted that the product of these terms yields the powers of the original polynomial $f$. This is due to each term $x_i^{p_i - k_i} \cdot x_i^{k_i}$ ultimately resulting in $x_i^{p_i}$. Consequently, we obtain:
+
 $$
 \mathbf{D}^{(n)} \cdot vec(S^{\otimes n}) = C \cdot n! \cdot \prod_{i=1}^m x_i^{p_i} = n! \cdot f.    eee
 $$
