@@ -65,7 +65,7 @@ for i = 1 : length(ret_s)
     t1 = t1_pTop_sQPEP_merge_s_sQPEP(pinvG, coefs_tq, cur_q.'*sqrt(cur_s));
     t2 = t2_pTop_sQPEP_merge_s_sQPEP(pinvG, coefs_tq, cur_q.'*sqrt(cur_s));
     t3 = t3_pTop_sQPEP_merge_s_sQPEP(pinvG, coefs_tq, cur_q.'*sqrt(cur_s));
-    cur_cost = J_func_pTop((cur_q).'*(sqrt(cur_s)), ([t1;t2;t3]), (r0), (b0), (nvr));
+    cur_cost = J_func_pTop_fast((cur_q).'*(sqrt(cur_s)), ([t1;t2;t3]), (r0), (b0), (nvr));
     if (best_cost > cur_cost)
         best_cost = cur_cost;
         best_idx = i;
@@ -83,7 +83,14 @@ best_t = [best_t1; best_t2; best_t3];
 
 best_s
 
-
+function J = J_func_pTop_fast(q, t, r, b, nv)
+    R = q2R(q); 
+    t_matrix = repmat(t', size(r, 1), 1); 
+    transformed_r = r * R' + t_matrix; 
+    differences = transformed_r - b; 
+    projections = sum(differences .* nv, 2); 
+    J = sum(projections.^2); 
+end
 function J = J_func_pTop(q, t, r, b, nv)
 len = size(r, 1);
 R = q2R(q);
