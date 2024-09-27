@@ -1,5 +1,5 @@
 # sQPEP_Solver
-Authors: Bohuan Xue, Yilong Zhu, Tianyu Liu, Jin Wu, Jianhao Jiao, Yi Jiang, Zhijian He and Chengxi Zhang
+Authors: Bohuan Xue, Yilong Zhu, Tianyu Liu, Jin Wu, Jianhao Jiao, Yi Jiang, Chengxi Zhang, Xinyu Jiang and Zhijian He
 
 ![wow](https://raw.githubusercontent.com/byronsit/sQPEP_Solver/main/cover.png "wow")
 
