@@ -4,9 +4,6 @@ Authors: Bohuan Xue, Yilong Zhu, Tianyu Liu, Jin Wu, Jianhao Jiao, Yi Jiang, Che
 ![wow](https://raw.githubusercontent.com/byronsit/sQPEP_Solver/main/cover.png "wow")
 
 
-
-The corresponding paper is currently under review. Detailed information and the full paper will be shared once the review process is complete.
-
 # How to use?
 see/run opensource_pTop.m directly! It is expected to work well across most versions of MATLAB.
 
